@@ -25,11 +25,11 @@ def main():
     ret += '<style>input {font-size: 20px; } button { font-size: 20px; }</style>'
     ret += '</head><body>'
     ret += '<img width=510 height=510 src="/board.svg?%f"></img></br></br>' % time.time()
-    ret += '<form action="/game/" method="post"><button name="New Game" type="submit">New Game</button></form>'
-    ret += '<form action="/undo/" method="post"><button name="Undo" type="submit">Undo Last Move</button></form>'
-    ret += '<form action="/move/"><input type="submit" value="Make Human Move:"><input name="move" type="text"></input></form>'
-    ret += '<form action="/dev/" method="post"><button name="Comp Move" type="submit">Make Ai Move</button></form>'
-    ret += '<form action="/engine/" method="post"><button name="Stockfish Move" type="submit">Make Stockfish Move</button></form>'
+    ret += '<form action="/game/" method="post"><button name="New Game" type="submit">Pradėti iš naujo</button></form>'
+    ret += '<form action="/undo/" method="post"><button name="Undo" type="submit">Sugrįžti ėjimu atgal</button></form>'
+    ret += '<form action="/move/"><input type="submit" value="Padaryti ėjima:"><input name="move" type="text"></input></form>'
+    ret += '<form action="/dev/" method="post"><button name="Comp Move" type="submit">AI ėjimas</button></form>'
+    ret += '<form action="/engine/" method="post"><button name="Stockfish ėjimas" type="submit">Make Stockfish Move</button></form>'
     return ret
 # Display Board
 @app.route("/board.svg/")
