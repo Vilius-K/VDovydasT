@@ -62,3 +62,16 @@ int Karalius_Lentele[8][8] = {
     -30, -40, -40, -50, -50, -40, -40, -30,
     -30, -40, -40, -50, -50, -40, -40, -30};
 
+    string FEN_eilute =
+
+    // Susirandam koks skaicius kiekvienos figuros yra ant lentos
+    size_t bp = count(FEN_eilute.begin(), FEN_eilute.end(), 'P');
+    size_t jp = count(FEN_eilute.begin(), FEN_eilute.end(), 'p');
+    size_t bz = count(FEN_eilute.begin(), FEN_eilute.end(), 'K');
+    size_t jz = count(FEN_eilute.begin(), FEN_eilute.end(), 'k');
+    size_t br = count(FEN_eilute.begin(), FEN_eilute.end(), 'R');
+    size_t jr = count(FEN_eilute.begin(), FEN_eilute.end(), 'r');
+    size_t bb = count(FEN_eilute.begin(), FEN_eilute.end(), 'B');
+    size_t jb = count(FEN_eilute.begin(), FEN_eilute.end(), 'b');
+    size_t bk = count(FEN_eilute.begin(), FEN_eilute.end(), 'Q');
+    size_t jk = count(FEN_eilute.begin(), FEN_eilute.end(), 'q');
