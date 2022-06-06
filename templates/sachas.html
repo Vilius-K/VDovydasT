@@ -1,0 +1,29 @@
+{% extends "sablonas.html" %}
+{% block turinys %}
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button> -->
+<!--jquery-->
+<script type="text/javascript">
+	$(window).on('load', function() {
+		$('#myModal').modal('show');
+	});
+</script>
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Žaidimas baigtas</h5>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<p>Šachas</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Uždaryti</button>
+				<form action="/game/" method="post"><button name="New Game" type="submit" class="btn btn-primary">Pradėti žaidimą iš naujo</button></form>
+				{% endblock turinys %}
+
+

@@ -1,0 +1,20 @@
+{% extends "sablonas.html" %}
+{% block headturinys %}
+    <style>input {font-size: 20px; } button { font-size: 20px; }</style>
+{% endblock headturinys %}
+
+{% block turinys %}
+<div class="container-fluid">
+    <img width=510 height=510 src="/board.svg?%f"></img></br></br>
+    <form action="/game/" method="post"><button name="New Game" type="submit" class="btn btn-outline-dark">Pradėti iš naujo</button></form>
+    <form action="/undo/" method="post"><button name="Undo" type="submit" class="btn btn-outline-dark">Sugrįžti ėjimu atgal</button></form>
+
+
+    <form action="/move/"><input type="submit" value="Atlikti ėjimą:" class="btn btn-outline-dark">
+    <input name="move" type="text" maxlength="4" size="4" style="position:relative; left:-5px; top:2px;"></input>
+    </form>
+
+
+    <form action="/dev/" method="post"><button name="Comp Move" type="submit" class="btn btn-outline-dark">Priešininko ėjimas</button></form>
+ </div>
+{% endblock turinys %}
