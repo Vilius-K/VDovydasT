@@ -27,66 +27,17 @@ app = Flask(__name__)
 @app.route("/")
 def main():
     global count, board
-    ret = '<html><head>'
-    ret += '<style>input {font-size: 20px; } button { font-size: 20px; }</style>'
-    ret += '</head><body>'
-    ret += '<img width=510 height=510 src="/board.svg?%f"></img></br></br>' % time.time()
-    ret += '<form action="/game/" method="post"><button name="New Game" type="submit">Pradėti iš naujo</button></form>'
-    ret += '<form action="/undo/" method="post"><button name="Undo" type="submit">Sugrįžti ėjimu atgal</button></form>'
-    ret += '<form action="/move/"><input type="submit" value="Atlikti ėjimą:"><input name="move" type="text"></input></form>'
-    ret += '<form action="/dev/" method="post"><button name="Comp Move" type="submit">Priešininko ėjimas</button></form>'
+    ret = render_template('lenta.html')
     
     # Sacho ir mato nustatymas
     if board.is_stalemate():
-
-        ret += '<html>'
-        ret += '<head>'
-        ret += '</head>'
-        ret += ''
-        ret += '<body>'
-        ret += '    <div style = "position:absolute; left:615px; top:8px; font-size:70px; border:black; border-width:10px; border-style:solid;">'
-        ret += '        LYGIOSIOS (PADĖTIS BE IŠEITIES)'
-        ret += '    </div>'
-        ret += '</body>'
-        ret += '</html>'
-        #return Response(chess.svg.board(board=board, size=0), mimetype='image/svg+xml')
+        ret += render_template('lygiosios(stalemate).html')
     elif board.is_checkmate():
-        ret += '<html>'
-        ret += '<head>'
-        ret += '</head>'
-        ret += ''
-        ret += '<body>'
-        ret += '    <div style = "position:absolute; left:715px; top:8px; font-size:100px; border:black; border-width:10px; border-style:solid;">'
-        ret += '        ŠACHAS IR MATAS'
-        ret += '    </div>'
-        ret += '</body>'
-        ret += '</html>'
-        #return Response(chess.svg.board(board=board, size=0), mimetype='image/svg+xml')
+        ret += render_template('sahasirmatas.html')
     elif board.is_insufficient_material():
-        ret += '<html>'
-        ret += '<head>'
-        ret += '</head>'
-        ret += ''
-        ret += '<body>'
-        ret += '    <div style = "position:absolute; left:900px; top:8px; font-size:100px; border:black; border-width:10px; border-style:solid;">'
-        ret += '        LYGIOSIOS (INSUFFICIENT MATERIAL)'
-        ret += '    </div>'
-        ret += '</body>'
-        ret += '</html>'
-        #return Response(chess.svg.board(board=board, size=0), mimetype='image/svg+xml')
+        ret += render_template('insufficient_material.html')
     elif board.is_check():
-        ret += '<html>'
-        ret += '<head>'
-        ret += '</head>'
-        ret += ''
-        ret += '<body>'
-        ret += '    <div style = "position:absolute; left:900px; top:8px; font-size:100px; border:black; border-width:10px; border-style:solid;">'
-        ret += '        ŠACHAS'
-        ret += '    </div>'
-        ret += '</body>'
-        ret += '</html>'
-
-        #return Response(chess.svg.board(board=board, size=0), mimetype='image/svg+xml')
+        ret += render_template('sachas.html')
     return ret
 
 # Display Board
