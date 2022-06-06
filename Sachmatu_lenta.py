@@ -1,7 +1,7 @@
 # Remaining imports
 import traceback
 import chess
-from flask import Flask, Response, request
+from flask import Flask, render_template, Response, request
 import webbrowser
 import time
 import chess.svg
