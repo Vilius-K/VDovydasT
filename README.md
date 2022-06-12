@@ -5,3 +5,4 @@ VDTD - (Vilius - Dovydas - Tautvydas - Danielius). Šachmatų variklis su veikia
 .
 .
 .
+.
