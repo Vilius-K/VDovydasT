@@ -9,7 +9,7 @@ VDTD (Vilius, Dovydas, Tautvydas, Danielius) tai paprastas šachamtų variklis p
 ### LINUX:
 Atsisiųsti failus per terminalą:
 
-`git clone https://github.com/9Tape/VDTD.git`
+`git clone https://github.com/Vilius-K/VDTD.git`
 
 Nuėjus į "Sachmatai" aplanką paleisti terminalą ir įrašyti:
 
