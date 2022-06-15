@@ -1,5 +1,5 @@
 # APRAŠYMAS
-VDTD (Vilius, Dovydas, Tautvydas, Danielius) tai paprastas šachamtų variklis parašytas naudojant Python, mokyklos projektui. Parašytas pagal [Medium](https://medium.com/dscvitpune/lets-create-a-chess-ai-8542a12afef) tutorial'ą.
+VDTD (Vilius, Dovydas, Tautvydas, Danielius) tai paprastas šachamtų variklis parašytas naudojant C++, mokyklos projektui. Parašytas pagal [Medium](https://medium.com/dscvitpune/lets-create-a-chess-ai-8542a12afef) tutorial'ą.
 
 # GUI
 
