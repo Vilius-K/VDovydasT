@@ -44,4 +44,4 @@ Nuėjus į "Sachmatai" aplanką paleisti terminalą ir įrašyti:
 
 `d2d4`
 
-![pvz]()
+![pvz](https://cdn.discordapp.com/attachments/975047497909157998/986730130766463046/unknown.png)
